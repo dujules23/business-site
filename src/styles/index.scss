@@ -1,0 +1,35 @@
+@import 'antd/dist/antd.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$large: 1400px;
+$medium: 800px;
+$small: 600px;
+
+@import './utils';
+@import './colors';
+@import './layout';
+
+
+// standard card
+.standard-card {
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.25s;
+  &:hover {
+    svg {
+      color: black
+    }
+  }
+}
+
+// Loader
