@@ -16,7 +16,7 @@ export default function NavBar() {
       <div className="menu-icons" onClick={handleClick}>
         <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
-      <ul className="nav-menu">
+      <ul className={clicked ? "nav-menu active" : "nav-menu"}>
         {MenuData.map((item, index) => {
           return (
             <li key={index} className={item.cName}>
