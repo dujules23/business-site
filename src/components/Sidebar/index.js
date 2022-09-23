@@ -23,7 +23,9 @@ const Sidebar = ({ isOpen, toggle }) => {
           {MenuData.map((item, index) => {
             return (
               <div key={index}>
-                <SidebarLink to={item.url}>{item.title}</SidebarLink>
+                <SidebarLink to={item.url} onClick={toggle}>
+                  {item.title}
+                </SidebarLink>
               </div>
             );
           })}

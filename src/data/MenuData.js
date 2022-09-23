@@ -6,17 +6,17 @@ export const MenuData = [
   },
   {
     title: "About",
-    url: "/about",
+    url: "about",
     icon: "fa-solid fa-circle-info",
   },
   {
     title: "Services",
-    url: "/contact",
+    url: "contact",
     icon: "fa-solid fa-address-book",
   },
   {
     title: "FAQ",
-    url: "/faq",
+    url: "faq",
     icon: "fa-solid fa-address-book",
   },
   // {
