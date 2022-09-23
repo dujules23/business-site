@@ -2,19 +2,26 @@ export const MenuData = [
   {
     title: "Home",
     url: "/",
-    cName: "nav-links",
     icon: "fa-solid fa-house-user",
   },
   {
     title: "About",
     url: "/about",
-    cName: "nav-links",
     icon: "fa-solid fa-circle-info",
   },
   {
-    title: "Contact",
+    title: "Services",
     url: "/contact",
-    cName: "nav-links",
     icon: "fa-solid fa-address-book",
   },
+  {
+    title: "FAQ",
+    url: "/faq",
+    icon: "fa-solid fa-address-book",
+  },
+  // {
+  //   title: "Contact",
+  //   url: "/contact",
+  //   icon: "fa-solid fa-address-book",
+  // },
 ];

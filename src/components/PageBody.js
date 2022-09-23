@@ -1,4 +1,5 @@
-import NavBar from "./NavBar";
+import NavBar from "./Navbar";
+import Sidebar from "./Sidebar";
 import Content from "./Content";
 import Home from "../pages/Home";
 
@@ -20,6 +21,7 @@ export const PageContent = ({
     <div>
       {/* Nav Bar */}
       <NavBar />
+      <Sidebar />
       {/* Body Content */}
       {/* <Home className="home" /> */}
       <Content>{children}</Content>

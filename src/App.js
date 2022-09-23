@@ -1,12 +1,13 @@
 import React, { Suspense } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home";
 
 // Components
 import Loading from "./components/Loading";
 
 // routes
-const Home = React.lazy(() => import("./pages/Home"));
+// const Home = React.lazy(() => import("./pages/Home"));
 
 const routeList = [
   {
@@ -17,10 +18,10 @@ const routeList = [
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Routes>
-          {routeList.map((route) => (
+          {/* {routeList.map((route) => (
             <Route
               key={route.path}
               path={route.path}
@@ -30,7 +31,8 @@ function App() {
                 </Suspense>
               }
             />
-          ))}
+          ))} */}
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>

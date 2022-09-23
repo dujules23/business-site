@@ -1,19 +1,33 @@
+import React, { useState } from "react";
 import Layout from "../components/Layout";
-import NavBar from "../components/NavBar";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import { PageBody, PageContent, PageFooter } from "../components/PageBody";
 
 import "../styles/pages/_home.scss";
 
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // look in to adding this into an AppContext
+  const toggle = () => {
+    setIsOpen(!isOpen);
+    console.log(isOpen);
+  };
+
   return (
-    <Layout>
-      <PageBody>
-        <PageContent title="Q and Sons"></PageContent>
-        <div className="home">Welcome page</div>
-        {/* Footer Region */}
-        <PageFooter />
-      </PageBody>
-    </Layout>
+    <>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+    </>
+    // <Layout>
+    //   <PageBody>
+    //     <PageContent title=""></PageContent>
+
+    //     {/* Footer Region */}
+    //     <PageFooter />
+    //   </PageBody>
+    // </Layout>
   );
 };
 
