@@ -51,7 +51,16 @@ export default function Navbar({ toggle }) {
             {MenuData.map((item, index) => {
               return (
                 <NavItem key={index}>
-                  <NavLinks to={item.url}>{item.title}</NavLinks>
+                  <NavLinks
+                    to={item.url}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                  >
+                    {item.title}
+                  </NavLinks>
                 </NavItem>
               );
             })}
