@@ -19,9 +19,4 @@ export const MenuData = [
     url: "faq",
     icon: "fa-solid fa-address-book",
   },
-  // {
-  //   title: "Contact",
-  //   url: "/contact",
-  //   icon: "fa-solid fa-address-book",
-  // },
 ];

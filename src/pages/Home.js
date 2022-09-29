@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import InfoSection from "../components/InfoSection";
+import { homeObjOne } from "../components/InfoSection/Data";
 import { PageBody, PageContent, PageFooter } from "../components/PageBody";
 
 import "../styles/pages/_home.scss";
@@ -19,6 +22,8 @@ const Home = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
+      <HeroSection />
+      <InfoSection {...homeObjOne} />
     </>
     // <Layout>
     //   <PageBody>
