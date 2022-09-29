@@ -11,7 +11,7 @@ export const MenuData = [
   },
   {
     title: "Services",
-    url: "contact",
+    url: "services",
     icon: "fa-solid fa-address-book",
   },
   {

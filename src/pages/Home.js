@@ -4,6 +4,8 @@ import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
+import Services from "../components/Services";
+import CleanUp from "../images/svg-1.svg";
 import {
   homeObjOne,
   homeObjTwo,
@@ -27,7 +29,8 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
-      <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObjOne} img={<CleanUp />} />
+      <Services />
       <InfoSection {...homeObjTwo} />
     </>
     // <Layout>
