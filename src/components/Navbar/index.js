@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { MenuData } from "../../data/MenuData";
+import { animateScroll as scroll } from "react-scroll";
 // import "../styles/_navbar.scss";
 import {
   Nav,
@@ -18,13 +19,31 @@ const title = `Q & Sons Cleaning Solutions`;
 const buttonTitle = "Contact";
 
 export default function Navbar({ toggle }) {
-  console.log(toggle);
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
 
   return (
     <>
-      <Nav>
+      <Nav scrollNav={scrollNav}>
         <NavBarContainer>
-          <NavLogo to="/">{title}</NavLogo>
+          <NavLogo to="/" onClick={toggleHome}>
+            {title}
+          </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>

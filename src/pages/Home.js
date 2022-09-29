@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
 import Services from "../components/Services";
+import Footer from "../components/Footer";
 import CleanUp from "../images/svg-1.svg";
 import {
   homeObjOne,
@@ -32,6 +33,7 @@ const Home = () => {
       <InfoSection {...homeObjOne} img={<CleanUp />} />
       <Services />
       <InfoSection {...homeObjTwo} />
+      <Footer />
     </>
     // <Layout>
     //   <PageBody>
