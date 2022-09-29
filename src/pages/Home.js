@@ -4,7 +4,11 @@ import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
-import { homeObjOne } from "../components/InfoSection/Data";
+import {
+  homeObjOne,
+  homeObjTwo,
+  homeObjThree,
+} from "../components/InfoSection/Data";
 import { PageBody, PageContent, PageFooter } from "../components/PageBody";
 
 import "../styles/pages/_home.scss";
@@ -24,6 +28,7 @@ const Home = () => {
       <Navbar toggle={toggle} />
       <HeroSection />
       <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObjTwo} />
     </>
     // <Layout>
     //   <PageBody>
