@@ -1,6 +1,3 @@
-import React from "react";
-import CleanUp from "../../assets/cleanUp";
-
 export const homeObjOne = {
   id: "about",
   lightBg: true,

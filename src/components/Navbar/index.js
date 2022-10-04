@@ -28,7 +28,7 @@ export default function Navbar({ toggle }) {
       setScrollNav(false);
     }
   };
-
+  // function needed for scrolling to the top of the page; used for clicking the title at anytime in the nav bar.
   const toggleHome = () => {
     scroll.scrollToTop();
   };
