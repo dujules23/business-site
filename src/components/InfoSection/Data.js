@@ -12,7 +12,7 @@ export const homeObjOne = {
     "Excellence and professionalism are first when it comes to our Residential and Commercial Cleaning Service. We are constantly improving our services, staying up-to-date on all the lastest industry advancements and bringing our knowledge to your doorstep. Since 2021, our goal has remained the same -- to provide reliable services and make sure our clients know we are professionals they can trust.",
   buttonLabel: "Get Started",
   imgStart: false,
-  img: <CleanUp />,
+  img: require("../../images/svg-1.svg").default,
   alt: "clean-up",
   dark: false,
   primary: false,

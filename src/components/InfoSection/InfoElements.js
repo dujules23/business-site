@@ -87,7 +87,8 @@ export const ImgWrap = styled.div`
   height: 100%;
 `;
 
-export const Img = styled.svg`
+// this always needs to be an img tag
+export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;

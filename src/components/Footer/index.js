@@ -53,7 +53,7 @@ const Footer = () => {
               <FooterLink to="faq">FAQ</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
-          <SocialMedia>
+          {/* <SocialMedia>
             <SocialMediaWrap>
               <SocialLogo></SocialLogo>
               <WebsiteRights>
@@ -74,7 +74,7 @@ const Footer = () => {
                 </SocialIconLink>
               </SocialIcons>
             </SocialMediaWrap>
-          </SocialMedia>
+          </SocialMedia> */}
         </FooterLinksContainer>
       </FooterWrap>
     </FooterContainer>
