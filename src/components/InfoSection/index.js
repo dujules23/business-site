@@ -1,6 +1,5 @@
 import React from "react";
-import { ReactComponent as Svg1 } from "../../images/svg-1.svg";
-import { ReactComponent as Svg5 } from "../../images/svg-5.svg";
+import FaqAccordion from "../Faq";
 
 import { Button } from "../ButtonElement";
 import {
@@ -34,7 +33,6 @@ const InfoSection = ({
   dark,
   dark2,
 }) => {
-  console.log(img);
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -43,23 +41,29 @@ const InfoSection = ({
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
-                <BtnWrap>
-                  <Button
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                    primary={primary ? 1 : 0}
-                    dark={dark ? 1 : 0}
-                    dark2={dark2 ? 1 : 0}
-                  >
-                    {buttonLabel}
-                  </Button>
-                </BtnWrap>
+                {id === "faq" ? (
+                  <FaqAccordion />
+                ) : (
+                  <>
+                    <Heading lightText={lightText}>{headline}</Heading>
+                    <Subtitle darkText={darkText}>{description}</Subtitle>
+                    <BtnWrap>
+                      <Button
+                        to="home"
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact="true"
+                        offset={-80}
+                        primary={primary ? 1 : 0}
+                        dark={dark ? 1 : 0}
+                        dark2={dark2 ? 1 : 0}
+                      >
+                        {buttonLabel}
+                      </Button>
+                    </BtnWrap>
+                  </>
+                )}
               </TextWrapper>
             </Column1>
             <Column2>
