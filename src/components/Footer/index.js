@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { SocialMediaData } from "../../data/SocialMediaData";
 import {
   FooterContainer,
   FooterWrap,
@@ -61,18 +61,19 @@ const Footer = () => {
               Durrell Jules © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" aria-label="Facebook">
-                <FaFacebook />
-              </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Instagram">
-                <FaInstagram />
-              </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Twitter">
-                <FaTwitter />
-              </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Twitter">
-                <FaLinkedin />
-              </SocialIconLink>
+              {SocialMediaData.map((item, index) => {
+                return (
+                  <div key={index}>
+                    <SocialIconLink
+                      href={item.href}
+                      target={item.target}
+                      aria-label={item.label}
+                    >
+                      {item.icon}
+                    </SocialIconLink>
+                  </div>
+                );
+              })}
             </SocialIcons>
           </SocialMediaWrap>
         </SocialMedia>

@@ -98,7 +98,7 @@ export const SocialIcons = styled.div`
   display: flex;
   justify-content: space-bewteen;
   align-items: center;
-  width: 240px;
+  // width: 240px;
 `;
 
 export const SocialIconLink = styled.a`
