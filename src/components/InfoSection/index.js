@@ -1,5 +1,6 @@
 import React from "react";
 import FaqAccordion from "../Faq";
+import Contact from "../Contact";
 
 import { Button } from "../ButtonElement";
 import {
@@ -47,6 +48,7 @@ const InfoSection = ({
                   <>
                     <Heading lightText={lightText}>{headline}</Heading>
                     <Subtitle darkText={darkText}>{description}</Subtitle>
+                    {id === "contact" && <Contact />}
                     <BtnWrap>
                       <Button
                         to="home"

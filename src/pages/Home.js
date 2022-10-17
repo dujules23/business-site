@@ -33,6 +33,7 @@ const Home = () => {
       <InfoSection {...homeObjOne} />
       <Services />
       <InfoSection {...homeObjTwo} />
+      <InfoSection {...homeObjThree} />
       <Footer />
     </>
     // <Layout>
