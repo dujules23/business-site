@@ -39,7 +39,7 @@ const HeroSection = () => {
             primary="true"
             dark="false"
             big="true"
-            fontBig="true"
+            fontBig="false"
           >
             Contact Now {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>

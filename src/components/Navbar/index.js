@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { MenuData } from "../../data/MenuData";
 import { animateScroll as scroll } from "react-scroll";
+import NavContext from "../../context/NavContext";
 // import "../styles/_navbar.scss";
 import {
   Nav,
@@ -37,48 +38,52 @@ export default function Navbar({ toggle }) {
     window.addEventListener("scroll", changeNav);
   }, []);
 
+  const NavBarContextItems = { toggleHome };
+
   return (
     <>
-      <Nav scrollNav={scrollNav}>
-        <NavBarContainer>
-          <NavLogo to="/" onClick={toggleHome}>
-            {title}
-          </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <NavMenu>
-            {MenuData.map((item, index) => {
-              return (
-                <NavItem key={index}>
-                  <NavLinks
-                    to={item.url}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    exact="true"
-                    offset={-80}
-                  >
-                    {item.title}
-                  </NavLinks>
-                </NavItem>
-              );
-            })}
-          </NavMenu>
-          <NavBtn>
-            <NavBtnLink
-              to="contact"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-            >
-              {buttonTitle}
-            </NavBtnLink>
-          </NavBtn>
-        </NavBarContainer>
-      </Nav>
+      <NavContext.Provider value={NavBarContextItems}>
+        <Nav scrollNav={scrollNav}>
+          <NavBarContainer>
+            <NavLogo to="/" onClick={toggleHome}>
+              {title}
+            </NavLogo>
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+            <NavMenu>
+              {MenuData.map((item, index) => {
+                return (
+                  <NavItem key={index}>
+                    <NavLinks
+                      to={item.url}
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      exact="true"
+                      offset={-80}
+                    >
+                      {item.title}
+                    </NavLinks>
+                  </NavItem>
+                );
+              })}
+            </NavMenu>
+            <NavBtn>
+              <NavBtnLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                {buttonTitle}
+              </NavBtnLink>
+            </NavBtn>
+          </NavBarContainer>
+        </Nav>
+      </NavContext.Provider>
     </>
   );
 }

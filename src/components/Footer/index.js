@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import NavContext from "../../context/NavContext";
+import { animateScroll as scroll } from "react-scroll";
 import { SocialMediaData } from "../../data/SocialMediaData";
 import {
   FooterContainer,
@@ -17,6 +19,15 @@ import {
 } from "./FooterElements";
 
 const Footer = () => {
+  // const { toggleHome } = useContext(NavContext);
+
+  // const footerScroll = scroll.scrollToTop();
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
+  console.log(toggleHome);
   return (
     <FooterContainer>
       <FooterWrap>
@@ -56,7 +67,7 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo> {`Q & Sons`}</SocialLogo>
+            <SocialLogo onClick={toggleHome}> {`Q & Sons`}</SocialLogo>
             <WebsiteRights>
               Durrell Jules © {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>
