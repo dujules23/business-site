@@ -1,6 +1,7 @@
 import React from "react";
 import FaqAccordion from "../Faq";
 import Contact from "../Contact";
+import Map from "../Map";
 
 import { Button } from "../ButtonElement";
 import {
@@ -69,9 +70,13 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <ImgWrap>
-                <Img src={img} alt={alt} />
-              </ImgWrap>
+              {id === "contact" ? (
+                <Map />
+              ) : (
+                <ImgWrap>
+                  <Img src={img} alt={alt} />
+                </ImgWrap>
+              )}
             </Column2>
           </InfoRow>
         </InfoWrapper>
