@@ -38,7 +38,7 @@ export const FormItem = styled.li`
 `;
 
 export const FormInput = styled.input`
-  width: 49%
+  width: 100%
   margin-left: 2%;
   display: flex;
   flex-direction: row;

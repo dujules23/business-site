@@ -66,7 +66,16 @@ export default function Navbar({ toggle }) {
             })}
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="contact">{buttonTitle}</NavBtnLink>
+            <NavBtnLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              {buttonTitle}
+            </NavBtnLink>
           </NavBtn>
         </NavBarContainer>
       </Nav>
