@@ -62,3 +62,8 @@ export const FormMessage = styled.textarea`
   min-height: 150px;
   box-sizing: border-box;
 `;
+
+export const BtnWrap = styled.div`
+  display: flex;
+  justify-content: flex-start;
+`;

@@ -41,7 +41,7 @@ export const homeObjThree = {
   topLine: "Contact",
   headline: "Get your estimate today!",
   description: "",
-  buttonLabel: "Contact Now",
+  buttonLabel: "Send",
   imgStart: false,
   // img: require(<Svg1 />).default,
   alt: "clean-up",
