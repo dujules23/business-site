@@ -1,33 +1,39 @@
 import React from "react";
+// import "../../styles/index.scss";
+import "../Contact/contact.scss";
 
-import {
-  ContactForm,
-  FormList,
-  FormItem,
-  FormInput,
-  FormMessage,
-} from "./ContactElements";
+// import {
+//   ContactForm,
+//   FormList,
+//   FormItem,
+//   FormInput,
+//   FormMessage,
+// } from "./ContactElements";
 
 const Contact = () => {
   return (
     <>
-      <ContactForm>
-        <FormList>
-          <li>
-            <FormInput type="text" name="name" placeholder="name" required />
-          </li>
-          <li>
-            <FormInput type="email" name="email" placeholder="email" required />
-          </li>
-          <li>
-            <FormMessage
-              placeholder="Message"
-              name="message"
-              required
-            ></FormMessage>
-          </li>
-        </FormList>
-      </ContactForm>
+      <div className="container contact-page">
+        <div className="contact-form">
+          <form>
+            <ul>
+              <li className="half">
+                <input type="text" name="name" placeholder="Name" required />
+              </li>
+              <li className="half">
+                <input type="email" name="email" placeholder="Email" required />
+              </li>
+              <li>
+                <textarea
+                  placeholder="Message"
+                  name="message"
+                  required
+                ></textarea>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
     </>
   );
 };

@@ -11,7 +11,7 @@ import {
   homeObjThree,
 } from "../components/InfoSection/Data";
 
-import "../styles/pages/_home.scss";
+// import "../styles/pages/_home.scss";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
