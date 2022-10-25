@@ -20,15 +20,14 @@ const schema = yup.object().shape({
 });
 
 const Contact = () => {
-  // const form = useRef();
+  // right now this is the only way to get the email to work, commented out for form validation testing
+  const form = useRef();
 
   const [contactForm, setContactForm] = useState(initialValues);
 
-  const [contactErrors, setContactErrors] = useState(initialValues);
+  const [contactErrors, setContactErrors] = useState({});
 
   const [isValid, setIsValid] = useState(true);
-
-  // const refForm = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -37,6 +36,7 @@ const Contact = () => {
       .sendForm(
         "service_zwnukco",
         "contact_form",
+        // put form.current here to get email to send (for now)
         contactForm,
         "lajuMBbv1vpgraQXV"
       )
@@ -64,11 +64,9 @@ const Contact = () => {
         setIsValid(valid);
       })
       .catch((err) => {
-        console.log(err.errors);
-        setContactErrors({ ...contactErrors, [e.target.value]: err.errors[0] });
+        // console.log(err.errors);
+        setContactErrors({ ...contactErrors, [e.target.name]: err.errors[0] });
       });
-
-    console.log(contactErrors);
   };
 
   // change function
@@ -81,55 +79,52 @@ const Contact = () => {
     schema.isValid(contactForm).then((valid) => setIsValid(!valid));
   }, [contactForm]);
 
-  // useEffect(() => {
-  //   console.log(contactErrors.name);
-  // }, []);
   return (
     <>
       <div className="container contact-page">
         <div className="contact-form">
-          <form onSubmit={sendEmail}>
+          <form ref={form} onSubmit={sendEmail}>
             <ul>
               <li className="half">
                 <input
+                  id="name"
                   type="text"
                   name="name"
                   placeholder="Name"
                   defaultValue={initialValues.name}
                   onChange={onChange}
                 />
+                <div>{contactErrors.name}</div>
               </li>
-
-              <div>{contactErrors.name}</div>
 
               <li className="half">
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   placeholder="Email"
                   defaultValue={initialValues.email}
                   onChange={onChange}
                 />
+                <div>{contactErrors.email}</div>
               </li>
-              {contactErrors.email.length > 0 ? (
-                <p>{contactErrors.email}</p>
-              ) : null}
+
               <li>
                 <textarea
+                  id="message"
                   placeholder="Message"
                   name="message"
                   defaultValue={initialValues.message}
                   onChange={onChange}
                 ></textarea>
+                <div>{contactErrors.message}</div>
               </li>
-              {contactErrors.message.length > 0 ? (
-                <p>{contactErrors.message}</p>
-              ) : null}
+
               {/* <li>
                 <input type="submit" className="flat-button" />
               </li> */}
             </ul>
-            <button disabled={!isValid} type="button" className="flat-button">
+            <button disabled={isValid} type="button" className="flat-button">
               Send
             </button>
           </form>
