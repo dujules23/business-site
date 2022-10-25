@@ -27,7 +27,6 @@ const Footer = () => {
     scroll.scrollToTop();
   };
 
-  console.log(toggleHome);
   return (
     <FooterContainer>
       <FooterWrap>

@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "antd": "^4.23.2",
+    "email-js": "^2.0.2",
     "leaflet": "^1.9.2",
     "loaders.css": "^0.1.2",
     "node-sass": "^7.0.3",
@@ -21,7 +22,8 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.7",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
