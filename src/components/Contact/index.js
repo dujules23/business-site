@@ -11,38 +11,22 @@ const initialValues = {
 };
 
 const schema = yup.object().shape({
-  name: yup.string().required("Please enter your name."),
-  email: yup.string().required("Please enter your email."),
-  message: yup.string().required("Please enter a message."),
+  name: yup.string().required("Please enter your name.").min(3),
+  email: yup
+    .string()
+    .email("Email must be a valid email")
+    .required("Please enter your email."),
+  message: yup.string().required("Please enter a message.").min(20),
 });
 
 const Contact = () => {
+  // const form = useRef();
+
   const [contactForm, setContactForm] = useState(initialValues);
 
-  const [contactErrors, setContactErrors] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [contactErrors, setContactErrors] = useState(initialValues);
 
-  const form = useRef();
-
-  // validate function
-  const validate = (e) => {
-    yup
-      .reach(schema, e.target.name)
-      .validate(e.target.value)
-      .then(() => setContactErrors({ ...contactErrors, [e.target.name]: "" }))
-      .catch((err) =>
-        setContactErrors({ ...contactErrors, [e.target.value]: err.errors })
-      );
-  };
-
-  // change function
-  const onChange = (e) => {
-    setContactForm({ [e.target.name]: e.target.value });
-    validate(e);
-  };
+  const [isValid, setIsValid] = useState(true);
 
   // const refForm = useRef();
 
@@ -53,7 +37,7 @@ const Contact = () => {
       .sendForm(
         "service_zwnukco",
         "contact_form",
-        form.current,
+        contactForm,
         "lajuMBbv1vpgraQXV"
       )
       .then(
@@ -67,17 +51,44 @@ const Contact = () => {
           console.log(err.text, "Failed...");
         }
       );
-    console.log(form);
+    // console.log(form);
+  };
+
+  // validate function
+  const validate = (e) => {
+    yup
+      .reach(schema, e.target.name)
+      .validate(e.target.value)
+      .then((valid) => {
+        setContactErrors({ ...contactErrors, [e.target.name]: "" });
+        setIsValid(valid);
+      })
+      .catch((err) => {
+        console.log(err.errors);
+        setContactErrors({ ...contactErrors, [e.target.value]: err.errors[0] });
+      });
+
+    console.log(contactErrors);
+  };
+
+  // change function
+  const onChange = (e) => {
+    validate(e);
+    setContactForm({ ...contactForm, [e.target.name]: e.target.value });
   };
 
   useEffect(() => {
-    console.log("Hello");
-  }, []);
+    schema.isValid(contactForm).then((valid) => setIsValid(!valid));
+  }, [contactForm]);
+
+  // useEffect(() => {
+  //   console.log(contactErrors.name);
+  // }, []);
   return (
     <>
       <div className="container contact-page">
         <div className="contact-form">
-          <form ref={form} onSubmit={sendEmail}>
+          <form onSubmit={sendEmail}>
             <ul>
               <li className="half">
                 <input
@@ -88,6 +99,9 @@ const Contact = () => {
                   onChange={onChange}
                 />
               </li>
+
+              <div>{contactErrors.name}</div>
+
               <li className="half">
                 <input
                   type="email"
@@ -97,6 +111,9 @@ const Contact = () => {
                   onChange={onChange}
                 />
               </li>
+              {contactErrors.email.length > 0 ? (
+                <p>{contactErrors.email}</p>
+              ) : null}
               <li>
                 <textarea
                   placeholder="Message"
@@ -105,10 +122,16 @@ const Contact = () => {
                   onChange={onChange}
                 ></textarea>
               </li>
-              <li>
+              {contactErrors.message.length > 0 ? (
+                <p>{contactErrors.message}</p>
+              ) : null}
+              {/* <li>
                 <input type="submit" className="flat-button" />
-              </li>
+              </li> */}
             </ul>
+            <button disabled={!isValid} type="button" className="flat-button">
+              Send
+            </button>
           </form>
         </div>
       </div>
