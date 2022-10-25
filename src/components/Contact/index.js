@@ -27,7 +27,7 @@ const Contact = () => {
 
   const [contactErrors, setContactErrors] = useState({});
 
-  const [isValid, setIsValid] = useState(true);
+  const [disabled, setDisabled] = useState(true);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ const Contact = () => {
         "service_zwnukco",
         "contact_form",
         // put form.current here to get email to send (for now)
-        contactForm,
+        form.current,
         "lajuMBbv1vpgraQXV"
       )
       .then(
@@ -59,9 +59,9 @@ const Contact = () => {
     yup
       .reach(schema, e.target.name)
       .validate(e.target.value)
-      .then((valid) => {
+      .then(() => {
         setContactErrors({ ...contactErrors, [e.target.name]: "" });
-        setIsValid(valid);
+        // setDisabled(valid);
       })
       .catch((err) => {
         // console.log(err.errors);
@@ -76,7 +76,7 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    schema.isValid(contactForm).then((valid) => setIsValid(!valid));
+    schema.isValid(contactForm).then((valid) => setDisabled(!valid));
   }, [contactForm]);
 
   return (
@@ -124,7 +124,7 @@ const Contact = () => {
                 <input type="submit" className="flat-button" />
               </li> */}
             </ul>
-            <button disabled={isValid} type="button" className="flat-button">
+            <button type="submit" className="flat-button" disabled={disabled}>
               Send
             </button>
           </form>
