@@ -5,7 +5,7 @@ import "../Map/map.scss";
 
 const Map = () => {
   return (
-    <>
+    <div>
       <div className="info-map">
         {`Q & Sons `}
         <br />
@@ -29,7 +29,7 @@ const Map = () => {
           </Popup>
         </Marker>
       </MapContainer> */}
-    </>
+    </div>
   );
 };
 

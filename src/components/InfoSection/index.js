@@ -3,6 +3,8 @@ import FaqAccordion from "../Faq";
 import Contact from "../Contact";
 import Map from "../Map";
 
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
+
 import { Button } from "../ButtonElement";
 import {
   InfoContainer,
