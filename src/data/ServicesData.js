@@ -6,25 +6,24 @@ export const ServicesData = [
   {
     picture: Icon1,
     title: "Basic Cleaning",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.`,
-  },
-  {
-    picture: Icon2,
-    title: "Deep Cleaning",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.`,
+    description: [
+      "Apartments and Condos",
+      "Family Homes",
+      "After Party/Events",
+    ],
   },
   {
     picture: Icon3,
+    title: "Deep Cleaning",
+    description: [
+      "Foreclosure Clean Out",
+      "Moving (in/out)",
+      "Air BNB Cleaning",
+    ],
+  },
+  {
+    picture: Icon2,
     title: "Commercial",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.`,
+    description: ["Office Cleaning", "Post Construction", "Showrooms"],
   },
 ];

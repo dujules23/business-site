@@ -70,5 +70,10 @@ export const ServicesH2 = styled.h2`
 `;
 export const ServicesP = styled.p`
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
+  padding: 2px;
+`;
+
+export const ServiceItems = styled.ul`
+  padding: 2px;
 `;
