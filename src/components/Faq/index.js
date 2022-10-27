@@ -8,6 +8,7 @@ import {
   AccordionContainer,
   AccordionWrapper,
   AccordionDropdown,
+  AccordionText,
 } from "./FaqElements";
 
 const FaqAccordion = () => {
@@ -29,7 +30,7 @@ const FaqAccordion = () => {
             return (
               <div key={index}>
                 <AccordionWrapper onClick={() => toggleFaq(index)}>
-                  <h1>{item.question}</h1>
+                  <AccordionText>{item.question}</AccordionText>
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </AccordionWrapper>
                 {clicked === index ? (

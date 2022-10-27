@@ -49,3 +49,7 @@ export const AccordionDropdown = styled.div`
     font-size: 1rem;
   }
 `;
+
+export const AccordionText = styled.h1`
+  font-size: 20px;
+`;
