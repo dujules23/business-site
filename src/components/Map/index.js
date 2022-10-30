@@ -12,12 +12,14 @@ const Map = () => {
         Port Wentworth, Georiga <br />
         <span>email@email.com</span>
       </div>
+
       <div className="map-wrap">
-        <MapContainer center={[44.96366, 19.61045]} zoom={13}>
+        <MapContainer center={[32.1491, -81.1632]} zoom={13}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <Marker position={[44.96366, 19.61045]}></Marker>
+          <Marker position={[32.1491, -81.1632]}></Marker>
         </MapContainer>
       </div>
+
       {/* <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

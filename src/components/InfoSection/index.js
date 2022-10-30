@@ -76,7 +76,9 @@ const InfoSection = ({
             </Column1>
             <Column2>
               {id === "contact" ? (
-                <Map />
+                <ImgWrap>
+                  <Map />
+                </ImgWrap>
               ) : (
                 <ImgWrap>
                   <Img src={img} alt={alt} />

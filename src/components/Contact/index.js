@@ -124,7 +124,12 @@ const Contact = () => {
                 <input type="submit" className="flat-button" />
               </li> */}
             </ul>
-            <button type="submit" className="flat-button" disabled={disabled}>
+            <button
+              onClick={console.log("this works")}
+              type="submit"
+              className="flat-button"
+              disabled={disabled}
+            >
               Send
             </button>
           </form>

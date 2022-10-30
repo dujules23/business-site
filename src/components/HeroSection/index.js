@@ -40,6 +40,11 @@ const HeroSection = () => {
             dark="false"
             big="true"
             fontBig="false"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
           >
             Contact Now {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
