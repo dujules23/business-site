@@ -1,9 +1,9 @@
 import React from "react";
 import FaqAccordion from "../Faq";
 import Contact from "../Contact";
-import Map from "../Map";
+// import Map from "../Map";
 
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
+// import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
 import { Button } from "../ButtonElement";
 import {
@@ -75,15 +75,15 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              {id === "contact" ? (
+              {/* {id === "contact" ? (
                 <ImgWrap>
                   <Map />
                 </ImgWrap>
-              ) : (
-                <ImgWrap>
-                  <Img src={img} alt={alt} />
-                </ImgWrap>
-              )}
+              ) : ( */}
+              <ImgWrap>
+                <Img src={img} alt={alt} />
+              </ImgWrap>
+              {/* )} */}
             </Column2>
           </InfoRow>
         </InfoWrapper>

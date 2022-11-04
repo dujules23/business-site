@@ -43,7 +43,7 @@ export const homeObjThree = {
   description: "",
   buttonLabel: "Send",
   imgStart: false,
-  // img: require(<Svg1 />).default,
+  img: require("../../images/svg-6.svg").default,
   alt: "clean-up",
   dark: true,
   primary: true,
