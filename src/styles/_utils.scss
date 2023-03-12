@@ -171,7 +171,7 @@
 // typography
 
 // misc
-$shadowValue: 11px 6px 10px rgb(39 39 56 / 10%);
+$shadowValue: 11px 6px 10px rgba(75, 75, 92, 0.1);
 .standard-shadow{
   box-shadow: $shadowValue;
 }

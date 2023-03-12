@@ -1,6 +1,7 @@
 import React from "react";
 import { ServicesData } from "../../data/ServicesData";
 import { TbCheck } from "react-icons/tb";
+import _utils from "../../styles/_utils.scss";
 import {
   ServicesContainer,
   ServicesH1,
@@ -23,7 +24,7 @@ const Services = () => {
             <ServicesCard key={index}>
               <ServicesIcon src={item.picture} />
               <ServicesH2>{item.title}</ServicesH2>
-              <ServicesP>
+              <ServicesP className="flex flex-col">
                 {item.description.map((item, index) => {
                   return (
                     <ul>
