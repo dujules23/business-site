@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [],
   overrides: [],
-  parser: "babel-eslint",
+  parser: "@babel/eslint-parser",
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: "module",
