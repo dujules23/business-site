@@ -22,9 +22,9 @@ export const AccordionWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  text-align: center;
+  // width: 100%;
   cursor: pointer;
+  overflowy: scroll;
 
   h1 {
     padding: 2 rem;
@@ -37,7 +37,7 @@ export const AccordionDropdown = styled.div`
   background: #010606;
   color: #01bf71;
   width: 100%;
-  height: 100px;
+  height: 155px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,5 +51,5 @@ export const AccordionDropdown = styled.div`
 `;
 
 export const AccordionText = styled.h1`
-  font-size: 20px;
+  font-size: 1.2rem;
 `;

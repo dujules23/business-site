@@ -9,6 +9,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2015,
     sourceType: "module",
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ["@babel/preset-react"],
+    },
   },
   plugins: [],
   rules: {},

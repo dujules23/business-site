@@ -3,6 +3,8 @@ import { FaqData } from "../../data/FaqData";
 import { IconContext } from "react-icons/lib";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
+import _utils from "../../styles/_utils.scss";
+
 import {
   AccordionSection,
   AccordionContainer,
@@ -30,11 +32,13 @@ const FaqAccordion = () => {
             return (
               <div key={index}>
                 <AccordionWrapper onClick={() => toggleFaq(index)}>
-                  <AccordionText>{item.question}</AccordionText>
+                  <AccordionText className="flex flex-col ai-center">
+                    {item.question}
+                  </AccordionText>
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </AccordionWrapper>
                 {clicked === index ? (
-                  <AccordionDropdown>
+                  <AccordionDropdown className="flex flex-wrap ai-center">
                     <p>{item.answer}</p>
                   </AccordionDropdown>
                 ) : null}
