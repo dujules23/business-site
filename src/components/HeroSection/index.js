@@ -26,7 +26,14 @@ const HeroSection = () => {
   return (
     <HeroContainer id="/">
       <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        <div>
+          dangerouslySetInnerHTML=
+          {{
+            __html: (
+              <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+            ),
+          }}
+        </div>
       </HeroBg>
       <HeroContent>
         <HeroH1>{title}</HeroH1>
