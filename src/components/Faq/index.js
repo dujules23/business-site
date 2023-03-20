@@ -24,6 +24,7 @@ const FaqAccordion = () => {
 
     setClicked(index);
   };
+
   return (
     <IconContext.Provider value={{ color: "#01bf71", size: "25px" }}>
       <AccordionSection>

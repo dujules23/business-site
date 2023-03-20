@@ -51,25 +51,7 @@ const InfoSection = ({
                   <>
                     <Heading lightText={lightText}>{headline}</Heading>
                     <Subtitle darkText={darkText}>{description}</Subtitle>
-                    {id === "contact" ? (
-                      <Contact />
-                    ) : (
-                      <BtnWrap>
-                        <Button
-                          to="home"
-                          smooth={true}
-                          duration={500}
-                          spy={true}
-                          exact="true"
-                          offset={-80}
-                          primary={primary ? 1 : 0}
-                          dark={dark ? 1 : 0}
-                          dark2={dark2 ? 1 : 0}
-                        >
-                          {buttonLabel}
-                        </Button>
-                      </BtnWrap>
-                    )}
+                    {id === "contact" && <Contact />}
                   </>
                 )}
               </TextWrapper>
@@ -83,7 +65,6 @@ const InfoSection = ({
               <ImgWrap>
                 <Img src={img} alt={alt} />
               </ImgWrap>
-              {/* )} */}
             </Column2>
           </InfoRow>
         </InfoWrapper>

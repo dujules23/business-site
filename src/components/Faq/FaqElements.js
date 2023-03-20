@@ -14,6 +14,7 @@ export const AccordionSection = styled.div`
 export const AccordionContainer = styled.div`
   box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
   border-radius: 30px;
+  // max-height: 50px;
 `;
 
 export const AccordionWrapper = styled.div`
@@ -25,6 +26,7 @@ export const AccordionWrapper = styled.div`
   // width: 100%;
   cursor: pointer;
   overflowy: scroll;
+  max-height: 60px;
 
   h1 {
     padding: 2 rem;
@@ -46,10 +48,18 @@ export const AccordionDropdown = styled.div`
   border-top: 1px solid #01bf71;
 
   p {
-    font-size: 1rem;
+    font-size: 1 rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.75rem;
   }
 `;
 
 export const AccordionText = styled.h1`
-  font-size: 1.2rem;
+  font-size: 0.9375rem;
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 `;
