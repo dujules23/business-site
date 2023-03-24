@@ -49,3 +49,20 @@ export const homeObjThree = {
   primary: true,
   darkText: false,
 };
+
+export const homeObjFour = {
+  id: "images",
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: true,
+  topLine: "Images",
+  headline: "Check out our work!",
+  description: "",
+  buttonLabel: "Send",
+  imgStart: true,
+  img: require("../../images/svg-6.svg").default,
+  alt: "image-carousel",
+  dark: false,
+  primary: false,
+  darkText: true,
+};

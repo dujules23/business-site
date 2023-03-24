@@ -2,6 +2,7 @@ import React from "react";
 import FaqAccordion from "../Faq";
 import Contact from "../Contact";
 // import Map from "../Map";
+import ImageCarousel from "../ImageCarousel";
 
 // import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
@@ -62,9 +63,13 @@ const InfoSection = ({
                   <Map />
                 </ImgWrap>
               ) : ( */}
-              <ImgWrap>
-                <Img src={img} alt={alt} />
-              </ImgWrap>
+              {id === "images" ? (
+                <ImageCarousel />
+              ) : (
+                <ImgWrap>
+                  <Img src={img} alt={alt} />
+                </ImgWrap>
+              )}
             </Column2>
           </InfoRow>
         </InfoWrapper>

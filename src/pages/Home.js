@@ -9,6 +9,7 @@ import {
   homeObjOne,
   homeObjTwo,
   homeObjThree,
+  homeObjFour,
 } from "../components/InfoSection/Data";
 
 // import "../styles/pages/_home.scss";
@@ -31,6 +32,7 @@ const Home = () => {
       <Services />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
+      <InfoSection {...homeObjFour} />
       <Footer />
     </>
   );

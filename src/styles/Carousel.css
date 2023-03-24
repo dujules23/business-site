@@ -1,0 +1,46 @@
+.carousel{
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  max-width: 37.5rem;
+  max-height: 37.5rem;
+  position: relative;
+}
+
+.carousel .slide {
+  max-width: 80vh;
+  height: 80vh;
+}
+
+.carousel .slide img{
+  height: 100%;
+  width: 100%;
+}
+
+.image{
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .carousel{
+    height: 500px;
+    width: 300px;
+  }
+
+  .carousel .control-dots{
+    width: 75%;
+  }
+
+  .carousel .slide {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .carousel .slide img{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+  }
+}
