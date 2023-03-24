@@ -1,36 +1,55 @@
 .carousel{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
   justify-content: center;
   align-items: space-between;
-  max-width: 37.5rem;
-  max-height: 37.5rem;
+  height: auto;
+  width: auto;
+  max-width: 37.8rem;
+  max-height: 40rem;
   position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  border-radius: 10px;
 }
 
 .carousel .slide {
+  background-color: #004c2d;
   max-width: 80vh;
-  height: 80vh;
+  height: auto;
+  width: auto;
+  max-height: 80vh;
 }
 
 .carousel .slide img{
+  display: block;
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .image{
   margin: 0 auto;
-  height: 100%;
-  width: auto;
+  height: auto;
+  max-width: 250px;
+  max-height: 250px;
+  width: 20vw;
+  object-fit: contain;
 }
 
 @media only screen and (max-width: 480px) {
   .carousel{
-    height: 500px;
+    max-height: 90vh;
+    height: 250px;
     width: 300px;
   }
 
+  .carousel .thumb-wrapper{
+    height: 20px;
+    padding: 100px;
+  }
+
   .carousel .control-dots{
-    width: 75%;
+    width: 100%;
   }
 
   .carousel .slide {

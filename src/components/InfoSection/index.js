@@ -63,7 +63,7 @@ const InfoSection = ({
                   <Map />
                 </ImgWrap>
               ) : ( */}
-              {id === "images" ? (
+              {id === "ourwork" ? (
                 <ImageCarousel />
               ) : (
                 <ImgWrap>

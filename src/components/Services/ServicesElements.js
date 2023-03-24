@@ -68,7 +68,7 @@ export const ServicesH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
 `;
-export const ServicesP = styled.p`
+export const ServicesDiv = styled.div`
   font-size: 0.8rem;
   text-align: left;
   padding: 2px;

@@ -51,13 +51,14 @@ export const homeObjThree = {
 };
 
 export const homeObjFour = {
-  id: "images",
+  id: "ourwork",
   lightBg: true,
   lightText: false,
   lightTextDesc: true,
-  topLine: "Images",
+  topLine: "Our Work",
   headline: "Check out our work!",
-  description: "",
+  description:
+    "See what our clients get to experinece after they have decided to deal with the experts!",
   buttonLabel: "Send",
   imgStart: true,
   img: require("../../images/svg-6.svg").default,

@@ -9,7 +9,7 @@ import _utils from "../../styles/_utils.scss";
 const ImageCarousel = () => {
   return (
     <div>
-      <Carousel infiniteLoop autoPlay>
+      <Carousel autoPlay infiniteLoop>
         {imageData.map((item, index) => {
           return (
             <div className="flex " key={index}>

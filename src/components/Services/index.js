@@ -9,7 +9,7 @@ import {
   ServicesCard,
   ServicesIcon,
   ServicesH2,
-  ServicesP,
+  ServicesDiv,
 } from "./ServicesElements";
 
 const style = { color: "#01BF71" };
@@ -24,16 +24,18 @@ const Services = () => {
             <ServicesCard key={index}>
               <ServicesIcon src={item.picture} />
               <ServicesH2>{item.title}</ServicesH2>
-              <ServicesP className="flex flex-col">
+              <ServicesDiv className="flex flex-col">
                 {item.description.map((item, index) => {
                   return (
-                    <ul>
-                      <TbCheck style={style} />
-                      {item}
-                    </ul>
+                    <div key={index}>
+                      <div>
+                        <TbCheck style={style} />
+                        {item}
+                      </div>
+                    </div>
                   );
                 })}
-              </ServicesP>
+              </ServicesDiv>
             </ServicesCard>
           );
         })}
