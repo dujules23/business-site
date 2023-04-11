@@ -1,23 +1,43 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+
 import { imageData } from "../../data/imageData";
 import "../../styles/Carousel.css";
-
 import _utils from "../../styles/_utils.scss";
 
+import Slider from "react-animated-slider";
+import "react-animated-slider/build/horizontal.css";
+
 const ImageCarousel = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 200, min: 200 },
+      items: 2,
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 800 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <div>
-      <Carousel autoPlay infiniteLoop>
+      <Slider>
         {imageData.map((item, index) => {
           return (
-            <div className="flex " key={index}>
-              <img src={item.src} alt="clean-example" />
+            <div className="flex jc-evenly" key={index}>
+              <img className="image" src={item.src} alt="clean-example" />
             </div>
           );
         })}
-      </Carousel>
+      </Slider>
     </div>
   );
 };
