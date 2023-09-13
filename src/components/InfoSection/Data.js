@@ -1,19 +1,19 @@
 export const homeObjOne = {
   id: "about",
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
   topLine: "About",
   headline: "Team of Experts",
   description:
-    "Excellence and professionalism are first when it comes to our Residential and Commercial Cleaning Service. We are constantly improving our services, staying up-to-date on all the lastest industry advancements and bringing our knowledge to your doorstep. Since 2021, our goal has remained the same -- to provide reliable services and make sure our clients know we are professionals they can trust.",
+    "Excellence and professionalism are first when it comes to our Residential and Commercial Cleaning Service. We are constantly improving our services, staying up-to-date on all the latest industry advancements and bringing our knowledge to your doorstep. Since 2021, our goal has remained the same -- to provide reliable services and make sure our clients know we are professionals they can trust.",
   buttonLabel: "Get Started",
   imgStart: false,
   img: require("../../images/svg-1.svg").default,
   alt: "clean-up",
-  dark: false,
+  dark: true,
   primary: false,
-  darkText: true,
+  darkText: false,
 };
 
 export const homeObjTwo = {

@@ -37,7 +37,7 @@ export const AccordionWrapper = styled.div`
 
 export const AccordionDropdown = styled.div`
   background: #010606;
-  color: #01bf71;
+  color: #ffffff;
   width: 100%;
   height: 155px;
   display: flex;

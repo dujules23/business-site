@@ -10,18 +10,13 @@ export const MenuData = [
     icon: "fa-solid fa-circle-info",
   },
   {
-    title: "Services",
-    url: "services",
-    icon: "fa-solid fa-address-book",
-  },
-  {
     title: "FAQ",
     url: "faq",
     icon: "fa-solid fa-address-book",
   },
   {
-    title: "Our Work",
-    url: "ourwork",
+    title: "Services",
+    url: "services",
     icon: "fa-solid fa-address-book",
   },
 ];
