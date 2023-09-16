@@ -10,6 +10,7 @@
     "animate.css": "^4.1.1",
     "antd": "^4.23.2",
     "email-js": "^2.0.2",
+    "framer-motion": "^10.16.4",
     "leaflet": "^1.9.2",
     "loaders.css": "^0.1.2",
     "react": "^18.2.0",

@@ -39,7 +39,7 @@ const HeroSection = () => {
             primary="true"
             dark="false"
             big="true"
-            fontBig="false"
+            fontbig="false"
             smooth={true}
             duration={500}
             spy={true}

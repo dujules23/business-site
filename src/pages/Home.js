@@ -19,7 +19,6 @@ const Home = () => {
   // look in to adding this into an AppContext
   const toggle = () => {
     setIsOpen(!isOpen);
-    console.log(isOpen);
   };
 
   return (
@@ -28,7 +27,7 @@ const Home = () => {
       <Navbar toggle={toggle} />
       <HeroSection />
       <InfoSection {...homeObjOne} />
-      {/* <Services /> */}
+      <Services />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
       <Footer />

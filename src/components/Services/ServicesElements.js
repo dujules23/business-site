@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import { MdKeyboardArrowLeft, MdArrowBack } from "react-icons/md";
 
 export const ServicesContainer = styled.div`
-  height: 850px;
+  height: 880px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #010606;
+  background: #f9f9f9;
 
   @media screen and (max-width: 768px) {
-    height: 1300px;
+    height: 2700px;
   }
 `;
 export const ServicesWrapper = styled.div`
@@ -38,15 +39,22 @@ export const ServicesCard = styled.div`
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  max-height: 350px;
+  height: 600px;
   padding: 25px;
+  // margin-bottom: 25px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.02);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
+    // height: 600px;
+    // width: 500px;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 700px;
   }
 `;
 
@@ -57,8 +65,9 @@ export const ServicesIcon = styled.img`
 `;
 export const ServicesH1 = styled.h1`
   font-size: 2.5rem;
-  color: #fff;
+  color: #000;
   margin-bottom: 64px;
+  margin-top: 32px;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
@@ -67,13 +76,36 @@ export const ServicesH1 = styled.h1`
 export const ServicesH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
+  // color: #fff;
 `;
 export const ServicesP = styled.p`
   font-size: 0.8rem;
   text-align: left;
   padding: 2px;
+  // opacity: 0;
+  transition: all 0.3s ease-in-out;
+  // color: #fff;
+
+  // &:hover {
+  //   opacity: 1;
+  //   transition: all 0.2s ease-in-out;
+  // }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export const ServiceItems = styled.ul`
   padding: 2px;
+`;
+
+export const ArrowBack = styled(MdArrowBack)`
+  margin-right: 8px;
+  font-size: 20px;
+`;
+
+export const ArrowLeft = styled(MdKeyboardArrowLeft)`
+  margin-right: 8px;
+  font-size: 20px;
 `;

@@ -1,8 +1,8 @@
 export const homeObjOne = {
   id: "about",
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: "About",
   headline: "Team of Experts",
   description:
@@ -13,7 +13,7 @@ export const homeObjOne = {
   alt: "clean-up",
   dark: false,
   primary: false,
-  darkText: false,
+  darkText: true,
 };
 
 export const homeObjTwo = {
@@ -35,9 +35,9 @@ export const homeObjTwo = {
 
 export const homeObjThree = {
   id: "contact",
-  lightBg: false,
-  lightText: true,
-  lightTextDesc: true,
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: false,
   topLine: "Contact",
   headline: "Get your estimate today!",
   description: "",
@@ -45,7 +45,7 @@ export const homeObjThree = {
   imgStart: false,
   img: require("../../images/svg-6.svg").default,
   alt: "clean-up",
-  dark: true,
-  primary: true,
+  dark: false,
+  primary: false,
   darkText: false,
 };

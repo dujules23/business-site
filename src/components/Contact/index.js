@@ -109,7 +109,7 @@ const Contact = () => {
                 <div>{contactErrors.email}</div>
               </li>
 
-              <li>
+              <li className="texta-text">
                 <textarea
                   id="message"
                   placeholder="Message"
@@ -124,12 +124,7 @@ const Contact = () => {
                 <input type="submit" className="flat-button" />
               </li> */}
             </ul>
-            <button
-              onClick={console.log("this works")}
-              type="submit"
-              className="flat-button"
-              disabled={disabled}
-            >
+            <button type="submit" className="flat-button" disabled={disabled}>
               Send
             </button>
           </form>
