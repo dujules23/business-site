@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { MdKeyboardArrowLeft, MdArrowBack } from "react-icons/md";
 
 export const ServicesContainer = styled.div`
-  height: 880px;
+  height: 850px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f9f9f9;
+  background: #010606;
 
   @media screen and (max-width: 768px) {
     height: 2700px;
@@ -54,7 +54,7 @@ export const ServicesCard = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    height: 700px;
+    height: 520px;
   }
 `;
 
@@ -65,7 +65,7 @@ export const ServicesIcon = styled.img`
 `;
 export const ServicesH1 = styled.h1`
   font-size: 2.5rem;
-  color: #000;
+  color: #fff;
   margin-bottom: 64px;
   margin-top: 32px;
 
